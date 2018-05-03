@@ -1,0 +1,9 @@
+syntax = "proto2";
+import "base.proto";
+
+message GS2CRefreshPlayerProp {
+    optional PlayerProp prop = 1;   //玩家属性表
+}
+
+message GS2CLoginFinish {
+}

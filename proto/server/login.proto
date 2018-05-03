@@ -1,0 +1,19 @@
+syntax = "proto2";
+
+message GS2CHello {
+    optional uint32 timestamp = 1;
+}
+
+message GS2CLoginError {            //登陆提示
+    optional uint32 errcode = 1;    //错误码
+}
+
+message RoleInfo {
+    optional uint32 pid = 1;        //玩家id
+    optional string name = 2;       //玩家名字
+    optional string icon = 3;       //玩家头像
+}
+
+message GS2CSelectRole {                //显示可使用玩家列表
+    repeated RoleInfo role_list = 1;    //玩家列表
+}

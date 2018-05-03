@@ -1,0 +1,65 @@
+[:2018-03-07 23:08:20][:00000001] LAUNCH logger log/gs.log
+[:2018-03-07 23:08:20][:00000002] LAUNCH snlua bootstrap
+[:2018-03-07 23:08:20][:00000003] LAUNCH snlua launcher
+[:2018-03-07 23:08:20][:00000004] LAUNCH snlua cdummy
+[:2018-03-07 23:08:20][:00000005] LAUNCH harbor 0 4
+[:2018-03-07 23:08:20][:00000006] LAUNCH snlua datacenterd
+[:2018-03-07 23:08:20][:00000007] LAUNCH snlua service_mgr
+[:2018-03-07 23:08:20][:00000008] LAUNCH snlua gs_launcher
+[:2018-03-07 23:08:20][:00000009] LAUNCH snlua share
+[:2018-03-07 23:08:20][:0000000a] LAUNCH snlua sharedatad
+[:2018-03-07 23:08:20][:00000009] share service booted
+[:2018-03-07 23:08:20][:0000000b] LAUNCH snlua debug_console 7001
+[:2018-03-07 23:08:20][:0000000b] Start debug console at 127.0.0.1:7001
+[:2018-03-07 23:08:20][:0000000c] LAUNCH snlua dictator
+[:2018-03-07 23:08:20][:0000000c] dictator service booted
+[:2018-03-07 23:08:20][:0000000d] LAUNCH snlua gamedb
+[:2018-03-07 23:08:20][:0000000d] gamedb service booted
+[:2018-03-07 23:08:20][:0000000e] LAUNCH snlua idsupply
+[:2018-03-07 23:08:20][:0000000e] idsupply service booted
+[:2018-03-07 23:08:20][:0000000f] LAUNCH snlua login
+[:2018-03-07 23:08:20][:00000010] LAUNCH gate S .login 8102 6 5000
+[:2018-03-07 23:08:20][:0000000f] login service booted
+[:2018-03-07 23:08:20][:00000011] LAUNCH snlua world
+[:2018-03-07 23:08:20][:00000012] LAUNCH snlua war
+[:2018-03-07 23:08:20][:00000012] lua loader error : ./lualib/base/preload.lua:45: [string "lualib/base/defines.lua"]:19: '}' expected (to close '{' at line 17) near '<\239>'
+stack traceback:
+	[C]: in function 'assert'
+	./lualib/base/preload.lua:45: in function 'loadfile_ex'
+	./lualib/base/reload.lua:10: in function 'import'
+	[string "service/war/warobj.lua"]:5: in local 'f'
+	./lualib/base/reload.lua:11: in function 'import'
+	[string "service/war/warmgr.lua"]:4: in local 'f'
+	./lualib/base/reload.lua:11: in function 'import'
+	./service/war/main.lua:6: in local 'main'
+	./skynet/lualib/loader.lua:48: in main chunk
+[:2018-03-07 23:08:20][:00000012] KILL self
+[:2018-03-07 23:08:20][:00000011] init service failed: ./skynet/lualib/skynet.lua:376: call failed
+stack traceback:
+	[C]: in function 'error'
+	./skynet/lualib/skynet.lua:376: in upvalue 'yield_call'
+	./skynet/lualib/skynet.lua:387: in function 'skynet.call'
+	(...tail calls...)
+	./service/world/main.lua:30: in local 'start'
+	./skynet/lualib/skynet.lua:622: in function <./skynet/lualib/skynet.lua:619>
+	[C]: in function 'xpcall'
+	./skynet/lualib/skynet.lua:626: in function 'skynet.pcall'
+	./skynet/lualib/skynet.lua:630: in function 'skynet.init_service'
+	./skynet/lualib/skynet.lua:643: in upvalue 'f'
+	./skynet/lualib/skynet.lua:105: in function <./skynet/lualib/skynet.lua:104>
+[:2018-03-07 23:08:20][:00000011] KILL self
+[:2018-03-07 23:08:20][:00000008] init service failed: ./skynet/lualib/skynet.lua:376: call failed
+stack traceback:
+	[C]: in function 'error'
+	./skynet/lualib/skynet.lua:376: in upvalue 'yield_call'
+	./skynet/lualib/skynet.lua:387: in function 'skynet.call'
+	(...tail calls...)
+	./service/gs_launcher.lua:10: in local 'start'
+	./skynet/lualib/skynet.lua:622: in function <./skynet/lualib/skynet.lua:619>
+	[C]: in function 'xpcall'
+	./skynet/lualib/skynet.lua:626: in function 'skynet.pcall'
+	./skynet/lualib/skynet.lua:630: in function 'skynet.init_service'
+	./skynet/lualib/skynet.lua:643: in upvalue 'f'
+	./skynet/lualib/skynet.lua:105: in function <./skynet/lualib/skynet.lua:104>
+[:2018-03-07 23:08:20][:00000008] KILL self
+[:2018-03-07 23:08:20][:00000002] KILL self

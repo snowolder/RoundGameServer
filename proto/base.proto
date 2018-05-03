@@ -1,0 +1,32 @@
+syntax = "proto2";
+
+message GS2CSendMessage {
+    optional string msg = 1;
+}
+
+message PlayerProp {
+    optional string mask = 1;       //标记哪些字段是有更新
+    optional uint32 pid = 2;        //玩家id
+    optional string name = 3;       //玩家名字
+    optional uint32 exp = 4;        //经验
+    optional uint32 grade = 5;      //等级
+    optional uint32 school = 6;     //门派
+    optional uint32 sex = 7;        //性别
+    optional uint32 icon = 8;       //头像图标
+    optional uint32 phy_attack = 9;         //物理攻击
+    optional uint32 phy_defense = 10;       //物理防御
+    optional uint32 mag_attack = 11;        //法术攻击
+    optional uint32 mag_defense = 12;       //法术防御
+    optional uint32 cure_power = 13;        //治疗强度
+    optional uint32 speed = 14;             //出手速度
+    optional uint32 seal_hit_ratio = 15;    //封印命中
+    optional uint32 res_seal_hit_ratio = 16;//封印抗性
+    optional uint32 phy_critical_ratio = 17;//物理暴击
+    optional uint32 res_phy_critical_ratio = 18;    //物理抗暴
+    optional uint32 mag_critical_ratio = 19;//法术暴击
+    optional uint32 res_mag_critical_ratio = 20;    //法术抗暴
+    optional uint32 hp = 21;                //当前气血
+    optional uint32 max_hp = 22;            //最大气血
+    optional uint32 mp = 23;                //当前魔法
+    optional uint32 max_mp = 24;            //最大魔法
+}

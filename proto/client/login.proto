@@ -1,0 +1,17 @@
+syntax = "proto2";
+
+message C2GSLoginAccount {          //使用账号登陆
+    optional string account = 1;    //账号
+    optional string pwd = 2;        //密码
+}
+
+message C2GSCreateRole {            //创建角色
+    optional string account = 1;    //账号
+    optional string name = 2;       //名字
+    optional uint32 icon = 3;       //头像(待定)
+}
+
+message C2GSSelectRole {            //选择角色登陆
+    optional string account = 1;    //账号
+    optional uint32 pid = 2;        //玩家id
+}

@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+message ItemUnit {
+    optional uint32 sid = 1;        //道具造型id
+    optional uint32 item_id = 2;    //道具唯一id
+    optional uint32 amount = 3;     //道具数量
+    optional uint32 pos = 4;        //所在道具栏位置
+}
+
+message GS2CItemList {
+    repeated ItemUnit item_list = 1;    //道具列表
+}

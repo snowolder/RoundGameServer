@@ -1,0 +1,7 @@
+syntax = "proto2";
+
+message C2GSItemUse {
+    optional uint32 item_id = 1;        //道具唯一id
+    optional uint32 target = 2;         //道具使用目标
+    optional uint32 amount = 3；        //使用数量
+}
